@@ -76,7 +76,7 @@
   display: block;
   margin: 0 auto;
   overflow: hidden;
-  background:var(--elemBgColor);
+  background: var(--elemBgColor);
 }
 .ldio-4hs57pso3p6 {
   width: 100%;
@@ -88,4 +88,17 @@
 }
 .ldio-4hs57pso3p6 div {
   box-sizing: content-box;
+}
+
+@media (max-width: 575px) {
+  .ldio-4hs57pso3p6 div {
+    width: 20px;
+    height: 20px;
+  }
+  .ldio-4hs57pso3p6 {
+   padding:  0 20px;
+  }
+  .loadingio-spinner-ellipsis-58d1uacm30o {
+    height: 100px;
+  }
 }

@@ -44,7 +44,7 @@
         </div>
       </template>
       <template v-slot:noData>
-        <h2>{{ noDataText() }}</h2>
+        <p>{{ noDataText() }}</p>
       </template>
     </list-view>
   </div>
@@ -71,7 +71,7 @@
         } else if (this.filter === 'completed') {
           return 'У вас нет завершенных задач';
         }
-        return 'Вы еще не выполняли задач';
+        return 'У вас нет активных задач';
       },
       dataForListView() {
         if (this.filter === 'all') {
