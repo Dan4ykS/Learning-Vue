@@ -23,7 +23,7 @@
     margin-bottom: 20px;
     text-decoration: none;
     .formControl {
-      cursor: pointer;
+      cursor: default;
       background-color: var(--elemsBgColor);
       border: 1px solid var(--elemsBgColor);
       min-height: 50px;

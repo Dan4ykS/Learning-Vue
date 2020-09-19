@@ -1,7 +1,7 @@
 <template>
   <div class="tasks">
     <h2>Страница для менеджмента задач</h2>
-    <div class="tasks__header flexWrap_center">
+    <div class="tasks__header flexWrap flexWrap_center">
       <add-task />
       <select v-model="filter">
         <option value="all">Все</option>
@@ -11,7 +11,7 @@
     </div>
     <list-view :data="dataForListView()">
       <template v-slot:component="{ elem }">
-        <div class="tasks__item flexWrap_center" :class="{ tasks__item_completed: elem.completed }">
+        <div class="tasks__item flexWrap flexWrap_center" :class="{ tasks__item_completed: elem.completed }">
           <checkbox :changeFunc="() => changeCompleted(elem.id)" :chekedCondition="elem.completed" />
           <textarea
             class="formControl"

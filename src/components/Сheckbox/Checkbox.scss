@@ -14,21 +14,19 @@
       content: "";
       position: absolute;
       opacity: 0;
+      height: 100%;
+      width: 100%;
       transition: 0.3s all;
     }
     &::before {
       top: 0;
       left: 0;
-      right: 0;
-      bottom: 0;
       background-color: var(--linkActiveColor);
     }
     &::after {
       top: 50%;
       left: 50%;
       transform: translate(-55%, -50%);
-      height: 100%;
-      width: 100%;
       background: url("./checkbox.svg");
     }
   }
@@ -49,7 +47,7 @@
       height: 15px;
       width: 15px;
       &::after {
-        transform: translate(-60%, -65%);
+        transform: translate(-65%, -70%);
       }
     }
   }
