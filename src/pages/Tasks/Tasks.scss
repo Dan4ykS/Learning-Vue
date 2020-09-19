@@ -1,0 +1,87 @@
+.tasks {
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  &__header {
+    margin-bottom: 40px;
+    select {
+      cursor: pointer;
+      margin-left: 10px;
+      background-color: var(--elemsBgColor);
+      border: none;
+      outline: none;
+      font-size: 16px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-decoration: none;
+    .formControl {
+      cursor: pointer;
+      background-color: var(--elemsBgColor);
+      border: 1px solid var(--elemsBgColor);
+      min-height: 50px;
+      resize: none;
+      &::-webkit-scrollbar-track {
+        background-color: var(--elemsBgColor);
+      }
+      &:focus {
+        border-color: var(--elemsBgColor);
+        box-shadow: none;
+      }
+    }
+    .icons {
+      margin-left: 20px;
+      span {
+        margin-left: 10px;
+      }
+    }
+    svg {
+      transition: all 0.2s;
+      &:hover {
+        color: #3ea576;
+      }
+    }
+    .active {
+      color: var(--linkActiveColor);
+    }
+    .editable {
+      background-color: #fff;
+      border: 1px solid var(--borderColor);
+      cursor: text;
+      &:focus {
+        box-shadow: 0 0 0 0.1rem gray;
+      }
+    }
+    &_completed {
+      text-decoration: line-through;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .tasks {
+    &__header {
+      select {
+        font-size: 12px;
+      }
+    }
+    &__item {
+      padding: 0 0.7rem;
+      .formControl {
+        font-size: 18px;
+      }
+      .icons {
+        span {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.checkbox {
+  cursor: pointer;
+  margin-right: 10px;
+
+  span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--borderColor);
+    background-color: var(--elemsBgColor);
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      opacity: 0;
+      transition: 0.3s all;
+    }
+    &::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--linkActiveColor);
+    }
+    &::after {
+      top: 50%;
+      left: 50%;
+      transform: translate(-55%, -50%);
+      height: 100%;
+      width: 100%;
+      background: url("./checkbox.svg");
+    }
+  }
+
+  &_checked {
+    span {
+      &::before,
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .checkbox {
+    span {
+      height: 15px;
+      width: 15px;
+      &::after {
+        transform: translate(-60%, -65%);
+      }
+    }
+  }
+}

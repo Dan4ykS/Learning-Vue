@@ -1,12 +1,12 @@
-import { createStore } from 'vuex'
+import { posts } from './modules/posts';
+import { tasks } from './modules/tasks';
+import { photos } from './modules/photos';
+import { createStore } from 'vuex';
 
 export default createStore({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
-  }
-})
+    tasks,
+    posts,
+    photos,
+  },
+});

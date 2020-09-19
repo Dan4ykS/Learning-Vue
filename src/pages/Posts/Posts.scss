@@ -1,0 +1,21 @@
+.posts {
+  &__header {
+    margin-bottom: 40px;
+    h2,
+    p {
+      margin: 0;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  &__item {
+    margin-bottom: 20px;
+    border: 1px solid var(--borderColor);
+    padding: 0.7rem;
+    border-radius: 15px;
+    div {
+      text-align: justify;
+    }
+  }
+}

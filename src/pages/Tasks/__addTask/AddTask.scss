@@ -1,0 +1,19 @@
+form {
+  width: 600px;
+  position: relative;
+}
+
+input {
+  padding-right: 35px;
+}
+
+svg {
+  position: absolute;
+  right: 10px;
+}
+
+@media (max-width: 575px) {
+  form {
+    width: 250px;
+  }
+}

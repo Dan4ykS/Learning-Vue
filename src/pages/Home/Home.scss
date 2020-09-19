@@ -1,0 +1,31 @@
+.home {
+  span {
+    display: inline-block;
+    color: red;
+    animation: heartbeat 1.5s linear infinite;
+  }
+
+  @keyframes heartbeat {
+    from {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  &__info {
+    text-align: left;
+    padding: 0 0.5rem;
+    a {
+      color: var(--mainTextColor);
+      text-decoration: inherit;
+      &:hover {
+        color: var(--linkActiveColor);
+      }
+    }
+  }
+}
