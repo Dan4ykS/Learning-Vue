@@ -9,9 +9,9 @@
         <option value="active">Активные</option>
       </select>
     </div>
-    <list-view :data="dataForListView()">
+    <list-view :data="dataForListView(filter)">
       <template v-slot:component="{ elem }">
-        <div class="tasks__item flexWrap flexWrap_center" :class="{ tasks__item_completed: elem.completed }">
+        <div class="tasks__item flexWrap" :class="{ tasks__item_completed: elem.completed }">
           <checkbox :changeFunc="() => changeCompleted(elem.id)" :chekedCondition="elem.completed" />
           <textarea
             class="formControl"
@@ -63,6 +63,7 @@
       taskText: '',
       filter: 'all' as filter,
     }),
+    computed: mapGetters(['getAllTasks', 'getCompleted', 'getActive']),
     methods: {
       ...mapActions(['loadTask', 'saveTasks', 'removeTask', 'changeTask', 'changeEditable', 'changeCompleted']),
       noDataText() {
@@ -83,13 +84,14 @@
         }
       },
     },
-    computed: mapGetters(['getAllTasks', 'getCompleted', 'getActive']),
+
     components: {
       ListView,
       AddTask,
       Checkbox,
     },
     created() {
+      this.loadTask();
       if (!this.getAllTasks.length) {
         this.loadTask();
       }

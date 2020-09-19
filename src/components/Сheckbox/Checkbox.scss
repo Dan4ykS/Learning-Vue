@@ -1,6 +1,5 @@
 .checkbox {
   cursor: pointer;
-  margin-right: 10px;
 
   span {
     display: block;
@@ -13,9 +12,9 @@
     &::after {
       content: "";
       position: absolute;
-      opacity: 0;
       height: 100%;
       width: 100%;
+      opacity: 0;
       transition: 0.3s all;
     }
     &::before {
@@ -26,8 +25,9 @@
     &::after {
       top: 50%;
       left: 50%;
-      transform: translate(-55%, -50%);
-      background: url("./checkbox.svg");
+      width: 100%;
+      transform: translate(-50%, -50%);
+      background: url("./checkbox.svg") center/cover no-repeat;
     }
   }
 
@@ -46,9 +46,6 @@
     span {
       height: 15px;
       width: 15px;
-      &::after {
-        transform: translate(-65%, -70%);
-      }
     }
   }
 }

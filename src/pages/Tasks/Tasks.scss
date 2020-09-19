@@ -19,12 +19,13 @@
   &__item {
     position: relative;
     border-radius: 15px;
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto;
     margin-bottom: 20px;
     text-decoration: none;
     .formControl {
       cursor: default;
+      max-width: 550px;
       background-color: var(--elemsBgColor);
       border: 1px solid var(--elemsBgColor);
       min-height: 50px;
@@ -38,7 +39,6 @@
       }
     }
     .icons {
-      margin-left: 20px;
       span {
         margin-left: 10px;
       }
@@ -77,6 +77,7 @@
       padding: 0 0.7rem;
       .formControl {
         font-size: 18px;
+        max-width: 280px;
       }
       .icons {
         span {
